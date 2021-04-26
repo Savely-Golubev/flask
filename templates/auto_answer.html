@@ -1,0 +1,15 @@
+<title>{{ data.title }}</title>
+
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="main-block card">
+        <p class="h5 mb-3">Фамилия: {{ data.surname }}</p>
+        <p class="h5 mb-3">Имя: {{ data.name }}</p>
+        <p class="h5 mb-3">Образование: {{ data.education }}</p>
+        <p class="h5 mb-3">Профессия: {{ data.profession }}</p>
+        <p class="h5 mb-3">Пол: {{ data.sex }}</p>
+        <p class="h5 mb-3">Мотивация: {{ data.motivation }}</p>
+        <p class="h5 mb-3">Готовы остаться на марсе? {{ data.ready }}</p>
+    </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="table">
+    <h2>Оформление каюты</h2>
+    <div class="title">
+        <span class="section">Цвет стен:</span>
+        <span class="section">Эмблема:</span>
+    </div>
+    <div class="holder">
+        {% if gender == "male" %}
+            {% if age < 21 %}
+                <div class="young-male color-block"></div>
+                <img src="{{ url_for('static', filename='img/baby-alien.jpg') }}" alt="baby" class="color-block"/>
+            {% else %}
+                <div class="old-male color-block"></div>
+                <img src="{{ url_for('static', filename='img/alien.jpg') }}" alt="adult" class="color-block"/>
+            {% endif %}
+        {% else %}
+            {% if age < 21 %}
+                <div class="young-female color-block"></div>
+                <img src="{{ url_for('static', filename='img/baby-alien.jpg') }}" alt="baby" class="color-block"/>
+            {% else %}
+                <div class="old-female color-block"></div>
+                <img src="{{ url_for('static', filename='img/alien.jpg') }}" alt="adult" class="color-block"/>
+            {% endif %}
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

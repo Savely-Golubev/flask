@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid card">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <div class="header-block">
+            <img src="{{ url_for('static', filename='img/mission-logo.png') }}" class="block mt-2 rounded"/>
+            <h2 class="block">Аварийный доступ</h2>  
+        </div>
+        <div class="form-group">
+            {{ form.astronaut_id.label(class="form-label h5 mt-2 mb-2") }}
+            {{ form.astronaut_id(class="form-control form-control-md") }}
+        </div>
+        <div class="form-group">
+            {{ form.astronaut_pw.label(class="form-label h5 mt-2 mb-2") }}
+            {{ form.astronaut_pw(class="form-control form-control-md") }}
+        </div>
+        <div class="form-group">
+            {{ form.captain_id.label(class="form-label h5 mt-2 mb-2") }}
+            {{ form.captain_id(class="form-control form-control-md") }}
+        </div>
+        <div class="form-group">
+            {{ form.captain_pw.label(class="form-label h5 mt-2 mb-2") }}
+            {{ form.captain_pw(class="form-control form-control-md") }}
+        </div>
+      {{ form.submit(class="btn btn-primary mt-2 mb-2") }}
+   </form>
+</div>
+{% endblock %}
